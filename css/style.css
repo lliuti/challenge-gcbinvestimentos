@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #FFFFFF;
   color: #9E9BAF;
+  overflow-x: hidden;
 }
 /*
 *
@@ -28,6 +31,10 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #7cc661;
 }
+
+button {
+  cursor: pointer;
+}
 /*
 *
 *
@@ -37,6 +44,7 @@ section#services, section#blog,
 section#membership {
   width: 100%;
   height: 100vh;
+  background-size: contain;
 }
 
 section#intro {
@@ -223,24 +231,193 @@ section#services {
   background-image: url(../img/bloco_services.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  /* background-size: contain; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section#services .content-container {
+  padding: 0 248px 0 0;
+  margin-top: 146px;
+}
+
+section#services .content-container h1 {
+  color: #2D3561;
+  font-size: 32px;
+}
+
+section#services .content-container p {
+  font-size: 16px;
+  color: #BCBCBC;
+  font-family: 'Muli', sans-serif;
+  margin: 30px 0;
+}
+
+section#services .content-container button {
+  padding: 14px 24px;
+  border: none;
+  background-color: #BADC58;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 20px;
+  box-shadow: 0px 6px 15px #BADC58;
 }
 /*
 *
 *
 */
+section#blog {
+  background-color: #FAFAFC;
+  display: flex;
+  flex-direction: column;
+}
 
+section#blog .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 48px 0 64px;
+}
 
+section#blog .top .top-content {
+  max-width: 510px;
+  text-align: center;
+}
 
+section#blog .top h1 {
+  color: #1D164D;
+}
 
+section#blog .top p {
+  margin-top: 16px;
+}
 
-section#blog {}
+section#blog .container-article-row {
+  position: relative;
+}
+
+section#blog .container-article-row .articles-row  {
+  display: flex;
+  position: absolute;
+  left: 150px;
+}
+
+section#blog .articles-row .article-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-right: 24px;
+}
+
+section#blog .articles-row .article-box .article-image {
+  margin-bottom: 24px;
+}
+
+section#blog .articles-row .article-box .article-image img {}
+
+section#blog .articles-row .article-box .article-description {
+  padding: 0 24px;
+}
+
+section#blog .articles-row .article-box .article-description h1 {
+  color: #1D164D;
+}
+
+section#blog .articles-row .article-box .article-description .author-box {
+  display: flex;
+  align-items: center;
+  margin: 24px 0 32px;
+}
+
+section#blog .articles-row .article-box .article-description .author-box .author-image {
+  margin-right: 8px;
+}
+
+section#blog .articles-row .article-box .article-description .author-box .author-image img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+section#blog .articles-row .article-box .article-description .author-box .author-name {}
 /*
 *
 *
 */
+section#membership {
+  background-image: url(../img/bloco_final_image.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 
+section#membership .membership-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+section#membership .membership-container .flex-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+section#membership .membership-container h1 {
+  color: #2D3561;
+}
 
+section#membership .membership-container .input-box {
+  margin-top: 32px;
+}
 
-section#membership {}
+section#membership .membership-container .input-box input {
+  border: 1px solid #2D3561;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 16px;
+  width: 340px;
+  transition: 300ms all;
+  margin-right: 16px;
+}
+
+section#membership .membership-container .input-box button {
+  padding: 16px;
+  background-color: #BADC58;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: 350ms all;
+  cursor: pointer;
+  box-shadow: 0px 6px 15px #BADC58;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px 137px;
+  font-family: 'Muli', sans-serif;
+}
+
+footer .left {
+  color: #1D164D;
+}
+
+footer .right {
+  text-align: end;
+}
+
+footer .left, footer .right a {
+  color: #9E9BAF;
+  text-decoration: none;
+  margin: 0 16px;
+}
+
+footer .left, footer .right a:hover {
+  color: rgb(146, 144, 156);
+}
